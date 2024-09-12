@@ -44,6 +44,14 @@ metadata: demo-compoundobjects-metadata
 #     dir: 'items'
 #     extension: 'html' 
 #     filter: 'objectid'  
+page_gen:
+  - data: 'demo-compoundobjects-metadata'
+  - data: 'institutions'
+    template: 'institution'
+    name: 'institutionid'
+    dir: 'institutions'
+    extension: 'html'
+    filter: 'institutionid'  
 
 ##########
 # Site/Organization Branding 

@@ -1,0 +1,133 @@
+---
+layout: default
+gallery: true
+item-meta: true
+---
+
+{% assign images = site.data[site.metadata] | where_exp: "item", "item.location_identifier == page.institutionid" %}
+
+<div class="container py-3">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/' | relative_url }}">Home</a></li>
+        <li class="breadcrumb-item"><a class="text-dark" href="{{ '/institutions/index.html' | relative_url }}">institutions</a></li>
+        <li class="breadcrumb-item active text-dark" aria-current="page">{{ page.title | truncatewords: 10 }}</li>
+    </ol>
+
+    <div class="row mb-3">
+
+        <div class="col-md-12">
+            <h2>{{ page.title }}</h2>
+            <a href="#institution-info" class="btn btn-outline-primary mb-4 mt-1 mr-2" >Institution Information <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
+                <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-down"/>
+            </svg></a>
+            {% unless images == empty %}
+            <a href="#image-browse" class="btn btn-outline-primary mb-4 mt-1" >Browse Images <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
+                <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-down"/>
+            </svg></a>
+            {% endunless %}
+        </div>
+
+        <div class="col-md-6 p-3">
+            <figure class="figure mx-3 text-center">
+                <a href="{{ '/items/' | append: page.related-objectid | append: '.html' | relative_url }}">
+                    <img class="figure-img img-fluid rounded lazyload"  alt="{{ page.title | escape }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E" data-src="{{ page.image_small }}" >
+                </a>
+                <figcaption class="figure-caption"><a href="{{ '/items/' | append: page.related-objectid | append: '.html' | relative_url }}">{{ page.title }}</a></figcaption>
+            </figure>
+        </div>
+
+        <div class="col-md-6 p-3">
+            {% include item/mini-map.html map-zoom=18 %}
+            <p><strong>Geographic Coordinates:</strong> {{ page.latitude }}, {{ page.longitude }}</p>
+            {% if page.location_description %}
+            <p><strong>Location:</strong> {{ page.location_description }}</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+    <div class="row justify-content-center pt-3">
+        <div class="col-md-8">
+            <h3 id="institution-info">{{ page.title }}</h3>
+
+            {% if page.architect %}
+            <p><strong>Architect:</strong> {{ page.architect }}</p>
+            {% endif %}
+            {% if page.history %}
+            <p><strong>History:</strong> {{ page.history }}</p>
+            {% endif %}
+            {% if page.description %}
+            <p><strong>Description:</strong> {{ page.description }}</p>
+            {% endif %}
+            {% if page.additions %}
+            <p><strong>Additions:</strong> {{ page.additions }}</p>
+            {% endif %}
+            {% if page.use_history %}
+            <p><strong>Use History:</strong> {{ page.use_history }}</p>
+            {% endif %}
+            {% if page.date %}
+            <p><strong>Date:</strong> {{ page.dates }}</p>
+            {% endif %}
+            {% if page.date_notes %}
+            <p><strong>Date Notes:</strong> {{ page.date_notes }}</p>
+            {% endif %}
+            {% if page.cost %}
+            <p><strong>Cost:</strong> {{ page.cost }}</p>
+            {% endif %}
+            {% if page.cost_notes %}
+            <p><strong>Cost Notes:</strong> {{ page.cost_notes }}</p>
+            {% endif %}
+            {% if page.sources %}
+            <p><strong>Sources:</strong> {{ page.sources }}</p>
+            {% endif %}
+            {% unless images == empty %}
+            <h3 id="image-browse" class="mt-5">Images of {{ page.title }}</h3>
+            {% endunless %}
+        </div>
+    </div>
+    {% unless images == empty %}
+    <div class="row justify-content-center py-4" id="lightgallery">
+        {% for i in images %}
+        <div class="col-md-3">
+            <div class="card text-center mb-3">
+                <a class="spotlight gallery-img" data-download="true" title="{{ i.title | escape }}" data-src="{{ i.object_location | relative_url }}">
+                    <img class="card-img-top lazyload" src="{{ i.image_small | relative_url }}" alt="{{ i.title | escape }}">
+                </a>
+                <div class="card-body">
+                    <div class="card-title">
+                        {{ i.title }}
+                    </div>
+                    <a href="{{ '/items/' | append: i.objectid | append: '.html' | relative_url }}" class="btn btn-outline-secondary" role="button">View Record</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endunless %}
+
+    {% assign institutionset = site.data.institutions | map: 'institutionid' | uniq | compact %}
+    {% assign last = institutionset | size | minus: 1 %}
+    {% unless page.index_number == 0 %}
+    {% assign back = page.index_number | minus: 1 %}
+    {% else %}
+    {% assign back = last %}
+    {%- endunless -%}
+    {% unless page.index_number == last %}
+    {% assign forward = page.index_number | plus: 1 %}
+    {% else %}
+    {% assign forward = 0 %}
+    {%- endunless -%}
+    {%- assign back_url = '/institutions/' | append: institutionset[back] | append: '.html' | relative_url -%}
+    {%- assign forward_url = '/institutions/' | append: institutionset[forward] | append: '.html' | relative_url -%}
+    <div class="text-center">
+        <a class="btn btn-secondary" href="{{ back_url }}" id="prev-page-button">&laquo; Previous</a>
+        <a class="btn btn-secondary" href="{{ '/institutions/index.html' | relative_url }}" >Back to institutions</a>
+        <a class="btn btn-secondary" href="{{ forward_url }}" id="next-page-button">Next &raquo;</a>
+    </div>
+    <div id="item-nav">
+        <div class="d-none d-md-block">
+            <a class="previous btn btn-lg btn-secondary" href="{{ back_url }}">&laquo;</a>
+            <a class="next btn btn-lg btn-secondary" href="{{ forward_url }}">&raquo;</a>
+        </div>
+    </div>
+</div>
