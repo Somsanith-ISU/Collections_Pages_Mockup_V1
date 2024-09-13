@@ -18,7 +18,7 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: CollectionBuilder CSV
+title: Collections Page Mockups (Version 1)
 # tagline, a short phrase that will appear throughout the site in the top banner
 tagline: Digital Collection Magic with Static Web Technologies
 # description appears in meta tags and other locations
@@ -34,7 +34,7 @@ author: CollectionBuilder
 #
 # Set the metadata for your collection (the name of the CSV file in your _data directory that describes the objects in your collection) 
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
-metadata: demo-compoundobjects-metadata 
+metadata: abvi-single-site
 # page generation settings [optional!]
 # [optional: only used if you need to tweak CB defaults or generate from more than one data file]
 # page_gen:
@@ -45,8 +45,8 @@ metadata: demo-compoundobjects-metadata
 #     extension: 'html' 
 #     filter: 'objectid'  
 page_gen:
-  - data: 'demo-compoundobjects-metadata'
-  - data: 'institutions'
+  - data: 'abvi-single-site'
+  - data: 'ABVI_Institutions'
     template: 'institution'
     name: 'institutionid'
     dir: 'institutions'
