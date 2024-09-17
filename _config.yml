@@ -45,7 +45,7 @@ metadata: abvi-single-site
 #     extension: 'html' 
 #     filter: 'objectid'  
 page_gen:
-  - data: 'abvi-single-site'
+  - data: 'ABVI_Institutions'
   - data: 'ABVI_Institutions'
     template: 'institution'
     name: 'institutionid'

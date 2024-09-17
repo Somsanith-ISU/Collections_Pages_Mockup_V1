@@ -6,7 +6,7 @@ permalink: /institutions/index.html
 
 <h2>Contributing Institutions</h2>
 
-<p>University of Idaho campus buildings are listed here alphabetically. When available, dates and location for each building are given, along with links to more detailed information about each building.</p>
+<p>Contributing institutions to the "Amplifying Black Voices in Iowa" project listed alphabetically.</p>
 
 {% capture letters %}{% for item in site.data.institutions %}{{ item.title | slice: 0 | capitalize }};{% endfor %}{% endcapture %}
 {%- assign uniqueLetters = letters | split: ';' | uniq | sort -%}
