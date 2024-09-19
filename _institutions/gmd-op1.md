@@ -3,7 +3,7 @@ title: Grout Museum District Collections
 institutionid: gmd
 layout: institution_page # Specify the layout you want to use
 description: "Description for gmd."
-permalink: /institutions/gmd.html
+permalink: /institutions/gmd-op1.html
 ---
 
 Content for Institution One goes here.

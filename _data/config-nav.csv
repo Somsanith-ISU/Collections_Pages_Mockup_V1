@@ -1,7 +1,8 @@
 display_name,stub,dropdown_parent
 Home,/,
 Browse,/browse.html,
-Institutions,/institutions/index.html,
+Institutions Option 1,/institutions/op1.html
+Institutions Option 2,/institutions/index.html,
 Subjects,/subjects.html,
 Locations,/locations.html,
 Map,/map.html,

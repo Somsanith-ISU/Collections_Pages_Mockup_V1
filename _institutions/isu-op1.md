@@ -3,7 +3,7 @@ title: Iowa State University Collections
 institutionid: isu
 layout: institution_page # Specify the layout you want to use
 description: "Description for isu."
-permalink: /institutions/isu.html
+permalink: /institutions/isu-op1.html
 ---
 
 Content for Institution One goes here.

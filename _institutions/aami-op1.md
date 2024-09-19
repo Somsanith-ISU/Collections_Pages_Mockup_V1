@@ -3,7 +3,7 @@ title: African American Museum of Iowa Collection
 institutionid: aami
 layout: institution_page # Specify your layout
 description: "AAMI description here."
-permalink: /institutions/aami.html
+permalink: /institutions/aami-op1.html
 ---
 
 Content for AAMI goes here.
