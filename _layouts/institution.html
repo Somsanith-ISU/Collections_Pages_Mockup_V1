@@ -1,0 +1,20 @@
+---
+# generic institution layout
+layout: page
+---
+
+{% assign institutionid = page.institutionid | default: "default_institution" %}  {# Replace this with your actual logic to get institutionid #}
+
+{% capture objectid %}
+  {% if institutionid == "grout_museum" %}
+    "https://www.groutmuseumdistrict.org/images/grout-logo.png"
+  {% elsif institutionid == "institution_2" %}
+    "https://example.com/image2.png"
+  {% elsif institutionid == "institution_3" %}
+    "https://example.com/image3.png"
+  {% else %}
+    "https://example.com/default-image.png"  {# Fallback image #}
+  {% endif %}
+{% endcapture %}
+
+{% include feature/jumbotron.html objectid=objectid %}
