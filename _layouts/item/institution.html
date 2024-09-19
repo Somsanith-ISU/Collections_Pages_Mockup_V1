@@ -17,6 +17,7 @@ item-meta: true
 
         <div class="col-md-12">
             <h2>{{ page.title }}</h2>
+            <h3>Hello, I'm the page identifier: {{ page.identifier }}</h3>
             <a href="#institution-info" class="btn btn-outline-primary mb-4 mt-1 mr-2" >Institution Information <svg class="bi icon-sprite" role="img" aria-label="Jump to Item Info">
                 <use xlink:href="{{ '/assets/lib/cb-icons.svg' | relative_url }}#arrow-down"/>
             </svg></a>
@@ -50,8 +51,8 @@ item-meta: true
         <div class="col-md-8">
             <h3 id="institution-info">{{ page.title }}</h3>
 
-            {% if page.architect %}
-            <p><strong>Architect:</strong> {{ page.architect }}</p>
+            {% if page.identifier %}
+            <p><strong>Identifier:</strong> {{ page.identifier }}</p>
             {% endif %}
             {% if page.history %}
             <p><strong>History:</strong> {{ page.history }}</p>
