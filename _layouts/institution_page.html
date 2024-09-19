@@ -1,0 +1,17 @@
+---
+# default institution_page layout
+layout: page
+---
+
+{% include feature/jumbotron.html objectid="demo_001" %}
+
+<!doctype html>
+<html lang="en" class="h-100">
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
+    <main id="maincontent" role="main" class="flex-shrink-0">
+      {{ content }}
+    </main>
+    {% include scroll-to-top.html %}
+  </body>
+</html>
