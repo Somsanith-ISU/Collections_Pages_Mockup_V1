@@ -54,6 +54,13 @@ page_gen:
     filter: 'institutionid'  
 
 ##########
+# Institituions pages
+collections:
+  institutions:
+    output: true
+
+
+##########
 # Site/Organization Branding 
 #   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #   To remove the branding, comment out these values, or delete them. 
