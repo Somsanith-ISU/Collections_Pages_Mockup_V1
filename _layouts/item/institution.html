@@ -60,6 +60,14 @@ item-meta: true
             {% if page.description %}
             <p><strong>Description:</strong> {{ page.description }}</p>
             {% endif %}
+
+            {% if page.mission_statement %}
+            <p><strong>Mission Statement:</strong> {{ page.mission_statement }}</p>
+            {% endif %}
+            {% if page.history %}
+            <p><strong>History:</strong> {{ page.history }}</p>
+            {% endif %}
+
             {% if page.additions %}
             <p><strong>Additions:</strong> {{ page.additions }}</p>
             {% endif %}
