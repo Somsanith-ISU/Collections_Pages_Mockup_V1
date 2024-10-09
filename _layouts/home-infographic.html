@@ -2,30 +2,29 @@
 # Default home page with boxes providing collection stats
 layout: page
 ---
+
 {%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid' -%}
-<div class="row">
+<div class="container"> <!-- Added a container for better layout control -->
+  <div class="row">
 
-  <div class="col-md-8">
+    <div class="col-md-12"> <!-- Changed to col-md-12 for full width -->
+      {% include index/description.html %}
+      {% include index/carousel.html title="Sample Items" %}
+    </div>
 
-    {% include index/description.html %}
-    {% include index/carousel.html title="Sample Items" %}
+    <h2>Black History Building Iowa</h2> <!-- Moved this outside of the col-md-8 for clarity -->
     
-  </div>
-  
-  <div class="col-md-6 p-3">
-    {% include item/mini-map.html map-zoom=100 %}
-    <p><strong>Geographic Coordinates:</strong> {{ page.latitude }}, {{ page.longitude }}</p>
-    {% if page.location_description %}
-    <p><strong>Location:</strong> {{ page.location_description }}</p>
-    {% endif %}
+    <div class="col-md-12 p-3"> <!-- Changed to col-md-12 for full width -->
+      {% include item/mini-map.html map-zoom=100 %}
+      <p><strong>Geographic Coordinates:</strong> {{ page.latitude }}, {{ page.longitude }}</p>
+      {% if page.location_description %}
+        <p><strong>Location:</strong> {{ page.location_description }}</p>
+      {% endif %}
+    </div>  
 
-    
-</div>  
-</div>
-  <div class="col-md-12">
-
-    {% include index/data-download.html %}
+    <div class="col-md-12"> <!-- Ensured this section is also full width -->
+      {% include index/data-download.html %}
+    </div>
 
   </div>
-
 </div>
