@@ -8,12 +8,11 @@ permalink: /vignettes_3.html
 
   <h2>Welcome to AAMI's Collection of Vignettes</h2>
 
-{% include feature/nav-menu.html sections="Explore by Subject;Explore by Location;Browse Items" %}
+{% include feature/nav-menu.html sections="Churches;Explore by Location;Browse Biographies" %}
 
-<h3> Explore by Subject </h3>
+<h2> Churches </h2>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
 
 <div class="col-md-12"> <!-- Changed to col-md-12 for full width -->
      {% include index/carousel.html %}
@@ -25,6 +24,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 {%- assign specific_parentid = "institutionid" -%}  <!-- Replace with the actual parentid you want to filter by -->
 
     {%- assign carousel-items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == institutionid' | where_exp: "item","item.image_small != nil or item.image_thumb != nil" -%}
+
+    
 
 
 
@@ -40,5 +41,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             
         </div>
 
-<h3> Browse Items </h3>
+<h3> Browse Biographies </h3>
 
