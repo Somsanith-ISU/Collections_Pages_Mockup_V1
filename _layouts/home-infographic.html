@@ -11,17 +11,17 @@ layout: page
     {% include index/carousel.html title="Sample Items" %}
     
   </div>
-  <div class="col-md-4">  
+  
+  <div class="col-md-6 p-3">
+    {% include item/mini-map.html map-zoom=100 %}
+    <p><strong>Geographic Coordinates:</strong> {{ page.latitude }}, {{ page.longitude }}</p>
+    {% if page.location_description %}
+    <p><strong>Location:</strong> {{ page.location_description }}</p>
+    {% endif %}
 
-    {% include index/time.html %}
-
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
-
-    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
     
-    {% include index/objects.html %}
-
-  </div>
+</div>  
+</div>
   <div class="col-md-12">
 
     {% include index/data-download.html %}

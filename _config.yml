@@ -20,14 +20,14 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # title of site appears in banner
 title: Collections Page Mockups (Version 1)
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Digital Collection Magic with Static Web Technologies
+tagline: A CLIR Grant
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "CollectionBuilder-CSV is a template for creating digital collection exhibits using static web technology."
+description: "Amplifying Black Voices in Iowa Project is a collaboration between 7 Institutions featureing the untold histories of the black communicty that helped to create the Iowa we know today."
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
-keywords: idaho;history;inland northwest
+keywords: iowa,black,african american,history,
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: CollectionBuilder
+author: Iowa State University Library
 
 ##########
 # COLLECTION SETTINGS
@@ -65,10 +65,10 @@ collections:
 #   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #   To remove the branding, comment out these values, or delete them. 
 #
-organization-name: "Center for Digital Inquiry and Learning (CDIL)"
-organization-link: https://cdil.lib.uidaho.edu/
-organization-logo-banner: https://cdil.lib.uidaho.edu/storying-extinction/assets/img/cdil.png
-organization-logo-nav: https://cdil.lib.uidaho.edu/assets/img/logo.png
+organization-name: "Council on Library and Information Resources (CLIR) Grant"
+organization-link: https://www.clir.org/hiddencollections/
+organization-logo-banner: https://www.clir.org/wp-content/uploads/sites/6/2017/11/clir-red-symbol.jpg
+organization-logo-nav: https://www.clir.org/wp-content/uploads/sites/6/2017/10/CLIR_red_w_wordmark.jpg
 
 ##########
 # ROBOTS EXCLUDE

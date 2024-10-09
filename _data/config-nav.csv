@@ -1,10 +1,12 @@
 display_name,stub,dropdown_parent
 Home,/,
 Browse,/browse.html,
-Institutions Option 2,/institutions/index.html,
+Institutions,/institutions/index.html,
 Subjects,/subjects.html,
 Locations,/locations.html,
 Map,/map.html,
 Timeline,/timeline.html,
 Data,/data.html,
 About,/about.html,
+Vignettes_1,/vignettes_1.html,
+Vignettes_2,/vignettes_2.html,
