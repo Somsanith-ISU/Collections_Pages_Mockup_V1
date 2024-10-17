@@ -3,10 +3,8 @@ title: Vignettes_3
 layout: about
 permalink: /vignettes_3.html
 ---
-<div class="container text-center">
-  {% include feature/image.html objectid="https://blackiowa.org/wp-content/uploads/2020/11/AAMI_horiz_fullcolor.png" width="75" alt="Welcome to AAMI's Collection of Vignettes" %}
 
-  <h2>Welcome to AAMI's Collection of Vignettes</h2>
+<h1>Welcome to AAMI's Collection of Vignettes</h1>
 
 {% include feature/nav-menu.html sections="Churches;Explore by Location;Browse Biographies" %}
 
