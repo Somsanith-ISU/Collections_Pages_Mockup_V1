@@ -20,7 +20,7 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # title of site appears in banner
 title: Amplifying Black Voices in Iowa
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: A CLIR Grant
+tagline: A CLIR supported, Melon funded grant
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
 description: "Amplifying Black Voices in Iowa Project is a collaboration between 7 Institutions featureing the untold histories of the black communicty that helped to create the Iowa we know today."
@@ -67,7 +67,7 @@ collections:
 #
 organization-name: "Council on Library and Information Resources (CLIR) Grant"
 organization-link: https://www.clir.org/hiddencollections/
-organization-logo-banner: https://www.clir.org/wp-content/uploads/sites/6/2017/11/clir-red-symbol.jpg
+organization-logo-banner: 
 organization-logo-nav: https://www.clir.org/wp-content/uploads/sites/6/2017/10/CLIR_red_w_wordmark.jpg
 
 ##########
