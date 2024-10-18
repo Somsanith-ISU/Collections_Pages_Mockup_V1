@@ -4,7 +4,7 @@ layout: about
 permalink: /vignettes_3.html
 ---
 
-<h1>Welcome to AAMI's Collection of Vignettes</h1>
+<h1>Sample Case Study</h1>
 
 {% include feature/nav-menu.html sections="Churches;Explore by Location;Browse Biographies" %}
 
@@ -66,9 +66,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
 </div>
 
-<div id="loadingIcon" class="text-center">
-    <div class="spinner-border text-dark" role="status"><span class="visually-hidden">Loading...</span></div>
-</div>
 
 <div class="row" id="browseItems">
     {% assign institutionid = "aami" %}  <!-- Set the institution ID to filter by "aami" -->

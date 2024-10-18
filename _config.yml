@@ -66,9 +66,9 @@ collections:
 #   To remove the branding, comment out these values, or delete them. 
 #
 organization-name: "Council on Library and Information Resources (CLIR) Grant"
-organization-link: https://www.clir.org/hiddencollections/
+organization-link: 
 organization-logo-banner: 
-organization-logo-nav: https://www.clir.org/wp-content/uploads/sites/6/2017/10/CLIR_red_w_wordmark.jpg
+organization-logo-nav: 
 
 ##########
 # ROBOTS EXCLUDE

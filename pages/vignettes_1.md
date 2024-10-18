@@ -4,7 +4,7 @@ layout: about
 permalink: /vignettes_1.html
 ---
 
-<h1>Welcome to AAMI's Collection of Vignettes</h1>
+<h1>Sample Case Study</h1>
 
 <div class="row mb-3 justify-content-center">
     <div class="col-md-8 text-center">
